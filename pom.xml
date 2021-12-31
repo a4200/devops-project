@@ -133,10 +133,6 @@
                 </configuration>
             </plugin>
 		<!-- CODE COVERAGE -->
-		<plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-        	  <version>2.6</version>
-        	</plugin>
 		    <plugin>
 		        <groupId>org.jacoco</groupId>
 		        <artifactId>jacoco-maven-plugin</artifactId>

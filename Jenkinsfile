@@ -14,7 +14,7 @@ pipeline {
         NEXUS_REPO_ID    = "p7-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
-	scannerHome = tool 'SONAT-4.2'
+	scannerHome = tool 'mysonarscanner4'
 	NEXUS_REPOGRP_ID = "p7-group"
     }
 

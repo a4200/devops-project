@@ -9,18 +9,20 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.40.209:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-        NEXUS_REPO_ID    = "vprofile-release"
+        NEXUS_URL = "172.31.94.238:8081"
+        NEXUS_REPOSITORY = "p7-release"
+        NEXUS_REPO_ID    = "p7-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
+	scannerHome = tool 'SONAT-4.2'
+	NEXUS_REPOGRP_ID = "p7-group"
     }
 
     stages{
 
         stage('Fetch Code') {
             steps {
-                git branch: 'paac', url: 'https://github.com/devopshydclub/vprofile-project.git'
+                git branch: 'paac', url: 'https://github.com/a4200/devops-project.git'
             }
         }
         stage('BUILD'){

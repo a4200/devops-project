@@ -63,7 +63,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
 
             environment {
-                scannerHome = tool 'mysonarscanner4'
+                scannerHome = tool 'SONAT-4.2'
             }
 
             steps {
